@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+
+class A
+{
+public:
+
+	void print()   // Function that uses the same name -- > œ«·Â  ” Œœ„ ‰›” «·≈”„
+	{
+		cout << "Function from class (A)" << endl;
+	}
+
+};
+
+class B : public A
+{
+public:
+
+	void print()   // Function that uses the same name -- > œ«·Â  ” Œœ„ ‰›” «·≈”„
+	{
+		cout << "Function from class (B)" << endl;
+	}
+
+};
+
+
+int main()
+{
+	B op;
+
+	//  ÂÌÿ»⁄ ⁄·Ì Õ”» «·«Ê·ÊÌÂ
+	op.print();  // Function from class (B)  < --  «·«Ê·ÊÌÂ 
+
+
+	// Â‰« «‰« »Õœœ
+	op.A::print();  // Function from class (A) < --   (A)  class  œ«Œ·  print()  „⁄‰«Â« «” œ⁄Ï 
+
+
+	return 0;
+}
